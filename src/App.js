@@ -3,6 +3,8 @@ import './App.css';
 import Display from './componenets/Display';
 import Keypad from './componenets/Keypad';
 
+
+
 class App extends Component {
   constructor(props){
     super(props);
@@ -11,8 +13,15 @@ class App extends Component {
     } 
     this.inputKey = this.inputKey.bind(this);
     this.checkInput = this.checkInput.bind(this);
+    this.evaluate = this.evaluate.bind(this);
   }
 
+  evaluate(){
+    const result = eval(this.state.value);
+    this.setState({
+      value: result
+    })
+  }
   inputKey(name){
     const check = this.checkInput(name);
     if (!check){
@@ -39,7 +48,7 @@ class App extends Component {
     return (
       <div className="App">
         <Display value={this.state.value}></Display>
-        <Keypad inputKey={this.inputKey}></Keypad>
+        <Keypad eval={this.evaluate} inputKey={this.inputKey}></Keypad>
       </div>
     );
   }
