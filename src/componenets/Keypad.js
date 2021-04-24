@@ -6,8 +6,16 @@ export default class Keypad extends Component {
 
         this.handleChange = this.handleChange.bind(this)
         this.eval = this.eval.bind(this);
+        this.backspace = this.backspace.bind(this);
+        this.reset = this.reset.bind(this);
     }
 
+    reset(){
+        this.props.reset();
+    }
+    backspace(){
+        this.props.backspace();
+    }
     eval(){
         this.props.eval();
     }
@@ -32,7 +40,11 @@ export default class Keypad extends Component {
                 <button value="9" onClick={this.handleChange}>9</button>
                 <button value="+" onClick={this.handleChange}>+</button>
                 <button value="-" onClick={this.handleChange}>-</button>
+                <button value="*" onClick={this.handleChange}>*</button>
+                <button value="/" onClick={this.handleChange}>/</button>
+                <button onClick={this.backspace}>CE</button>
                 <button onClick={this.eval}>=</button>
+                <button onClick={this.reset}>Reset</button>
             </div>
         )
     }
