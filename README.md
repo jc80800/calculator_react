@@ -18,3 +18,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Account for negative numbers
 - Display Result
 
+# CSS 
+
+- Referenced from Chris Sev
+- Source: https://scotch.io/bar-talk/build-a-css-grid-calculator-solution-to-code-challenge-2
