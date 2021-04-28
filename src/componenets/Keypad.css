@@ -1,0 +1,27 @@
+.calculator-buttons {
+    /* small spacing within our container */
+    padding: 20px;
+  
+    /* the grid stuff! */
+    display: grid;
+  
+    /* create 4 columns */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    grid-gap: 15px;
+}
+
+button{
+    background: rgba(0, 0, 0, 0.5); /* light background with opacity 50% */
+    border: 1px solid #111; /* black border */
+    padding: 20px;
+    color: #EEE; /* white text */
+    border-radius: 5px; /* rounded corners */
+    font-size: 22px; /* larger fonts */
+    cursor: pointer; /* make it look clickable */
+}
+
+.isReset{
+    grid-column: span 4;
+    background-color: #ff0000;
+}

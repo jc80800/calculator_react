@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Display.css'
 
 export default class Display extends Component {
     constructor(props){
@@ -6,9 +7,10 @@ export default class Display extends Component {
     }
     render() {
         return (
-            <div>
-                <p>{this.props.value}</p>
+            <div className="display">
+                <input value={this.props.value} disabled />
             </div>
+            
         )
     }
 }

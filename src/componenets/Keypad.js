@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Keypad.css'
 
 export default class Keypad extends Component {
     constructor(props){
@@ -27,24 +28,27 @@ export default class Keypad extends Component {
 
     render() {
         return (
-            <div>
+            <div className="calculator-buttons">
                 <button value="0" onClick={this.handleChange}>0</button>
                 <button value="1" onClick={this.handleChange}>1</button>
                 <button value="2" onClick={this.handleChange}>2</button>
+                <button value="+" onClick={this.handleChange}>+</button>
+
                 <button value="3" onClick={this.handleChange}>3</button>
                 <button value="4" onClick={this.handleChange}>4</button>
                 <button value="5" onClick={this.handleChange}>5</button>
+                <button value="-" onClick={this.handleChange}>-</button>
+
                 <button value="6" onClick={this.handleChange}>6</button>
                 <button value="7" onClick={this.handleChange}>7</button>
                 <button value="8" onClick={this.handleChange}>8</button>
-                <button value="9" onClick={this.handleChange}>9</button>
-                <button value="+" onClick={this.handleChange}>+</button>
-                <button value="-" onClick={this.handleChange}>-</button>
-                <button value="*" onClick={this.handleChange}>*</button>
-                <button value="/" onClick={this.handleChange}>/</button>
+                <button value="-" onClick={this.handleChange}>*</button>
+
                 <button onClick={this.backspace}>CE</button>
+                <button value="9" onClick={this.handleChange}>9</button>
                 <button onClick={this.eval}>=</button>
-                <button onClick={this.reset}>Reset</button>
+                <button value="/" onClick={this.handleChange}>/</button>
+                <button className="isReset" onClick={this.reset}>Reset</button>
             </div>
         )
     }

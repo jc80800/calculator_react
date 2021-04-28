@@ -61,8 +61,8 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <Display value={this.state.value}></Display>
-        <Keypad reset={this.reset} backspace={this.backspace} eval={this.evaluate} inputKey={this.inputKey}></Keypad>
+          <Display className="display" value={this.state.value}></Display>
+          <Keypad classname="keyPad" reset={this.reset} backspace={this.backspace} eval={this.evaluate} inputKey={this.inputKey}></Keypad>
       </div>
     );
   }
